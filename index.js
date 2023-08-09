@@ -29,7 +29,9 @@ app.use('/api/auth', require('./Routes/auth'))
 
 app.use('/api/events', require('./Routes/events'))
 
-
+app.get('*', (req, res) =>{
+    res.sendFile(__dirname + '/public/index.html')
+})
 
 
 //todo: Crud: events
